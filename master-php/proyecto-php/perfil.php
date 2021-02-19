@@ -1,6 +1,6 @@
-<?php require 'includes/redireccion.php'; ?>
-<?php require 'includes/cabecera.php'; ?>
-<?php require 'includes/lateral.php'; ?>
+<?php require_once 'includes/redireccion.php'; ?>
+<?php require_once 'includes/cabecera.php'; ?>
+<?php require_once 'includes/lateral.php'; ?>
 
 <div id="principal">
     <h1>Mi Perfil</h1>
@@ -30,4 +30,4 @@
     <?php borrarErrores(); ?>
 </div>
 
-<?php require 'includes/pie.php'; ?>
+<?php require_once 'includes/pie.php'; ?>

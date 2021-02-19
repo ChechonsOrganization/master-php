@@ -1,5 +1,5 @@
-<?php require 'conexion.php' ?>
-<?php require 'includes/helpers.php'; ?>
+<?php require_once 'conexion.php' ?>
+<?php require_once 'includes/helpers.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">

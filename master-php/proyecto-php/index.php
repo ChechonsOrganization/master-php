@@ -1,5 +1,5 @@
-    <?php require 'includes/cabecera.php'; ?>
-    <?php require 'includes/lateral.php'; ?>
+<?php require_once 'includes/cabecera.php'; ?>
+<?php require_once 'includes/lateral.php'; ?>
 
         <!-- caja principal -->
         <div id="principal">

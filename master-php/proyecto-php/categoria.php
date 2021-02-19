@@ -1,12 +1,19 @@
-<?php require 'includes/cabecera.php'; ?>
-    <?php require 'includes/lateral.php'; ?>
+<?php require_once 'includes/conexion.php'; ?>
+<?php require_once 'includes/helpers.php'; ?>
+<?php
+    $categoria_actual = conseguirCategoria($db, $_GET['id']);
+
+    if(!isset($categoria_actual['id'])){
+        header("Location: index.php");
+    }        
+?>
+<?php require_once 'includes/cabecera.php'; ?>
+<?php require_once 'includes/lateral.php'; ?>
 
         <!-- caja principal -->
         <div id="principal">
-            <?php
-                $categoria = conseguirCategoria($db, $_GET['id']);        
-            ?>
-            <h1>Entradas de <?=$categoria['nombre']?></h1>
+            
+            <h1>Entradas de <?=$categoria_actual['nombre']?></h1>
 
             <?php
                 $entradas = conseguirEntradas($db);
@@ -14,7 +21,6 @@
                     while($entrada = mysqli_fetch_assoc($entradas)):
             ?>
                         <article class="entrada">
-                            <?php //var_dump($entrada) ?>
                             <a href="">
                                 <h2><?=$entrada['titulo']?></h2>
                                 <span class="fecha"><?=$entrada['categoria'].' | '.$entrada['fecha'];  ?></span>
@@ -28,4 +34,4 @@
             
         </div>
     
-<?php require 'includes/pie.php'; ?>
+<?php require_once 'includes/pie.php'; ?>
